@@ -38,8 +38,7 @@ export function RotatingCube() {
 
         .cube-face {
           background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
-          box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.2),
-                      inset 0 0 20px rgba(255, 255, 255, 0.15);
+          box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.15);
           transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
 
@@ -52,16 +51,22 @@ export function RotatingCube() {
         .logo-container.paused {
           animation-play-state: paused;
         }
-        
+
         .logo-container img {
           transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
       `}</style>
 
       <div className="flex flex-col items-center gap-28">
-        <h1 className="text-white font-[family-name:var(--font-press-start)] text-2xl md:text-4xl tracking-wider">
-          Areculateir MYSTERY BOX
-        </h1>
+        {/* Title stacked */}
+        <div className="flex flex-col items-center text-center">
+          <div className="text-white font-[family-name:var(--font-press-start)] text-xl md:text-2xl tracking-wider">
+            Areculateir
+          </div>
+          <h1 className="text-white font-[family-name:var(--font-press-start)] text-3xl md:text-5xl tracking-wider leading-none">
+            MYSTERY BOX
+          </h1>
+        </div>
 
         <div
           className="relative w-40 h-40 transition-transform duration-1000 ease-out"
