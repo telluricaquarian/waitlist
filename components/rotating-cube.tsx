@@ -27,6 +27,17 @@ export function RotatingCube() {
           }
         }
 
+        @keyframes blink {
+          0%,
+          49% {
+            opacity: 1;
+          }
+          50%,
+          100% {
+            opacity: 0.2;
+          }
+        }
+
         .cube-container {
           animation: rotate 13s infinite linear;
           transform-style: preserve-3d;
@@ -56,6 +67,11 @@ export function RotatingCube() {
         .logo-container img {
           transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        .press-to-start {
+          animation: blink 1.05s steps(2, end) infinite;
+          text-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+        }
       `}</style>
 
       <div className="flex flex-col items-center gap-28">
@@ -79,9 +95,16 @@ export function RotatingCube() {
           <div className={`cube-container absolute w-full h-full ${isOpen ? "" : ""}`}>
             {/* Areculateir Logo - counter-rotates to stay facing forward */}
             <div
-              className={`logo-container absolute inset-0 flex items-center justify-center z-10 ${isOpen ? "" : ""}`}
+              className={`logo-container absolute inset-0 flex flex-col items-center justify-center z-10 ${isOpen ? "" : ""}`}
               style={{ transform: `translateZ(80px)` }}
             >
+              {/* Only show when open */}
+              {isOpen && (
+                <div className="press-to-start mb-4 text-white font-[family-name:var(--font-press-start)] text-xs md:text-sm tracking-widest">
+                  PRESS TO START
+                </div>
+              )}
+
               <img
                 src="/popup.png"
                 alt="Areculateir Logo"
