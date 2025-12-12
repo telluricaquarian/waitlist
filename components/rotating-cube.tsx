@@ -38,7 +38,8 @@ export function RotatingCube() {
 
         .cube-face {
           background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
-          box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.15);
+          box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.2),
+            inset 0 0 20px rgba(255, 255, 255, 0.15);
           transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
 
@@ -76,18 +77,18 @@ export function RotatingCube() {
           }}
         >
           <div className={`cube-container absolute w-full h-full ${isOpen ? "" : ""}`}>
-            {/* v0 Logo - counter-rotates to stay facing forward */}
+            {/* Areculateir Logo - counter-rotates to stay facing forward */}
             <div
               className={`logo-container absolute inset-0 flex items-center justify-center z-10 ${isOpen ? "" : ""}`}
               style={{ transform: `translateZ(80px)` }}
             >
               <img
-                src="/v0-logo.svg"
-                alt="v0 Logo"
-                width="96"
-                height="50"
+                src="/popup.png"
+                alt="Areculateir Logo"
+                width="220"
+                height="220"
                 className="brightness-0 invert"
-                style={{ transform: isOpen ? "scale(1)" : "scale(0.5)" }}
+                style={{ transform: isOpen ? "scale(1)" : "scale(0.65)" }}
               />
             </div>
 
