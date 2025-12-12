@@ -60,7 +60,7 @@ export function RotatingCube() {
 
       <div className="flex flex-col items-center gap-28">
         <h1 className="text-white font-[family-name:var(--font-press-start)] text-2xl md:text-4xl tracking-wider">
-          MYSTERY BOX
+          Areculateir MYSTERY BOX
         </h1>
 
         <div
